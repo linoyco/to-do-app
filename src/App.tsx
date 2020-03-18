@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Header from './Latout/Header';
+import Header from './Components/Layout/Header';
 
 const App: React.FunctionComponent = () => (
   <div>
