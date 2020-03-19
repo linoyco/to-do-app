@@ -12,7 +12,7 @@ const StyledSection: any = styled.section`
     display: flex;
     flex-direction: column;
 `;
-
+ 
 const StyledFirstDiv: any = styled.div`
     display: flex;
 `;
