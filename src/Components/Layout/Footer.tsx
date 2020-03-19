@@ -1,8 +1,8 @@
 import * as React from 'react';
 import styled from 'styled-components';
 
-const StyledDiv = styled.footer`
-    background-color: #313131;
+const StyledDiv: any = styled.footer`
+    background-color: #5560CF;
 	display: flex;
 	justify-content: center;
     align-items: flex-end;
@@ -11,7 +11,7 @@ const StyledDiv = styled.footer`
 
 const Footer: React.FunctionComponent = () => (
     <StyledDiv>
-        <h3 style={{color: '#FAFFA1'}}>App Bar</h3>
+        <h3 style={{color: 'white'}}>App Bar</h3>
     </StyledDiv>
 );
 

@@ -4,8 +4,8 @@ import { StylesProvider } from '@material-ui/core/styles';
 import { History } from 'history';
 import AppRoutes from './Containers/AppRoutes';
 
-const StyledDiv = styled.section`
-  background-color: #EAE9E9;
+const StyledDiv: any = styled.section`
+  background-color: #DFE1F7;
   width: 70%;
   height: 100%;
   display: flex;
@@ -16,6 +16,7 @@ const StyledDiv = styled.section`
   border: 1px solid black;
   border-radius: 10px;
   padding: 5px;
+  font-family: Arial;
 `;
 
 interface IProps {

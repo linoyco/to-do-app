@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { History } from 'history';
-import { ConnectedRouter } from "connected-react-router";
 
 import * as Routes from '../Lib/Routes';
 import Layout from '../Components/Layout';
