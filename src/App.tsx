@@ -7,11 +7,8 @@ import AppRoutes from './Containers/AppRoutes';
 const StyledDiv: any = styled.section`
   background-color: white;
   width: 70%;
-  height: 100%;
   display: flex;
 	justify-content: center;
-	align-items: center;
-  align-content: center;
   margin: auto;
   border: 1px solid black;
   border-radius: 10px;

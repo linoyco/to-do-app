@@ -44,7 +44,7 @@ const Header: React.FunctionComponent = () => (
         <StyledAvatar alt="user image" src='https://i.pravatar.cc/300' />
         <StyledNavButton to={Routes.PROFILE}><StyledProfile /></StyledNavButton>
         <StyledNavButton to={''}><StyledMessages /></StyledNavButton>
-        <StyledNavButtonList to={Routes.TODOLIST}><StyledListIcon /></StyledNavButtonList>
+        <StyledNavButtonList to={Routes.TODO_LIST}><StyledListIcon /></StyledNavButtonList>
     </StyledDiv>
 );
 

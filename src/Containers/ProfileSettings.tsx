@@ -11,14 +11,14 @@ const StyledSection: any = styled.section`
 `;
 
 const StyledHeader: any = styled.h1`
-    margin-left: auto;
     margin-right: auto;
+    margin-left: auto;
 `;
 
-const ToDoList: React.FunctionComponent = () => (
+const ProfileSettings: React.FunctionComponent = () => (
     <StyledSection>
-        <StyledHeader>ToDo List</StyledHeader>
+        <StyledHeader>Profile Settings:</StyledHeader>
     </StyledSection>
 );
 
-export default ToDoList;
+export default ProfileSettings;

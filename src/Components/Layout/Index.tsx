@@ -16,8 +16,6 @@ const Content = styled.section`
 	min-height: 500px;
 	max-height: 500px;
 	display: flex;
-	justify-content: center;
-	align-items: center;
 `;
 
 const Index: React.FunctionComponent<{ children: React.ReactNode }> = ({ children }) => (
