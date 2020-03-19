@@ -7,11 +7,15 @@ import AppRoutes from './Containers/AppRoutes';
 const StyledDiv = styled.section`
   background-color: #EAE9E9;
   width: 70%;
+  height: 100%;
   display: flex;
 	justify-content: center;
 	align-items: center;
   align-content: center;
   margin: auto;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 5px;
 `;
 
 interface IProps {

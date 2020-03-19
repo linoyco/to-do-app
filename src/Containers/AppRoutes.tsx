@@ -5,6 +5,7 @@ import { ConnectedRouter } from "connected-react-router";
 
 import * as Routes from '../Lib/Routes';
 import Layout from '../Components/Layout';
+import ToDoList from './ToDoList';
 
 interface IProps {
     history: History
@@ -19,7 +20,7 @@ const AppRoutes: React.FunctionComponent<IProps> = ({ history }) => (
         <Switch>
             <MyAppRoutes>
             <Route exact path={Routes.HOME} component={() => (<div>Hello, World!</div>)} />
-            <Route exact path={Routes.TODOLIST} component={() => (<div>Hello, ToDo List!</div>)} />
+            <Route exact path={Routes.TODOLIST} component={ToDoList} />
             </MyAppRoutes>
         </Switch>
     </Router>
