@@ -2,14 +2,14 @@ import * as React from 'react';
 import styled from 'styled-components';
 
 const StyledDiv = styled.div`
-    background-color: #F5F6CE;
-    margin-top: 0px;
-    margin-bottom: auto;
+    background-color: #252525;
+    display: flex;
+	justify-content: center;
 `;
 
 const Header: React.FunctionComponent = () => (
     <StyledDiv>
-        <h3>App Bar</h3>
+        <h2 style={{color: 'white'}}>App Bar</h2>
     </StyledDiv>
 );
 
