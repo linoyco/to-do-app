@@ -5,7 +5,7 @@ import { History } from 'history';
 import AppRoutes from './Containers/AppRoutes';
 
 const StyledDiv: any = styled.section`
-  background-color: #DFE1F7;
+  background-color: white;
   width: 70%;
   height: 100%;
   display: flex;

@@ -13,10 +13,11 @@ const Flex = styled.div`
 `;
 
 const Content = styled.section`
-	 margin: 200px;
-	 display: flex;
-	 justify-content: center;
-	 align-items: center;
+	min-height: 500px;
+	max-height: 500px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 `;
 
 const Index: React.FunctionComponent<{ children: React.ReactNode }> = ({ children }) => (
