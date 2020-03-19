@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const StyledDiv = styled.div`
     background-color: #252525;
     display: flex;
-	justify-content: center;
+    justify-content: center;
 `;
 
 const Header: React.FunctionComponent = () => (

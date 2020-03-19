@@ -6,6 +6,12 @@ import AppRoutes from './Containers/AppRoutes';
 
 const StyledDiv = styled.section`
   background-color: #EAE9E9;
+  width: 70%;
+  display: flex;
+	justify-content: center;
+	align-items: center;
+  align-content: center;
+  margin: auto;
 `;
 
 interface IProps {

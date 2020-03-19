@@ -3,24 +3,28 @@ import styled from 'styled-components';
 import Header from './Header';
 import Footer from './Footer';
 
-const Grid = styled.div`
-	width: 100vw;
+const Flex = styled.div`
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	justify-content: center;
+	align-items: stretch;
+	align-content: center;
 `;
 
 const Content = styled.section`
 	 margin: 200px;
 	 display: flex;
-	 flex-direction: column;
 	 justify-content: center;
 	 align-items: center;
 `;
 
 const Index: React.FunctionComponent<{ children: React.ReactNode }> = ({ children }) => (
-    <Grid>
+    <Flex>
         <Header />
         <Content>{children}</Content>
         <Footer />
-    </Grid>
+    </Flex>
 );
 
 export default Index;

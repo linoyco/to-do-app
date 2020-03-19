@@ -18,7 +18,8 @@ const AppRoutes: React.FunctionComponent<IProps> = ({ history }) => (
     <Router>
         <Switch>
             <MyAppRoutes>
-                <Route exact path={Routes.HOME} component={() => (<div>Hello, World!</div>)} />
+            <Route exact path={Routes.HOME} component={() => (<div>Hello, World!</div>)} />
+            <Route exact path={Routes.TODOLIST} component={() => (<div>Hello, ToDo List!</div>)} />
             </MyAppRoutes>
         </Switch>
     </Router>
