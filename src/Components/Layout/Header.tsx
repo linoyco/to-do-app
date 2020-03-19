@@ -42,7 +42,7 @@ const StyledProfile: any = styled(PersonOutline)`
 const Header: React.FunctionComponent = () => (
     <StyledDiv>
         <StyledAvatar alt="user image" src='https://i.pravatar.cc/300' />
-        <StyledNavButton to={''}><StyledProfile /></StyledNavButton>
+        <StyledNavButton to={Routes.PROFILE}><StyledProfile /></StyledNavButton>
         <StyledNavButton to={''}><StyledMessages /></StyledNavButton>
         <StyledNavButtonList to={Routes.TODOLIST}><StyledListIcon /></StyledNavButtonList>
     </StyledDiv>

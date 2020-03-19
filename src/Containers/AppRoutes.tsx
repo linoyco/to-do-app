@@ -5,6 +5,7 @@ import { History } from 'history';
 import * as Routes from '../Lib/Routes';
 import Layout from '../Components/Layout';
 import ToDoList from './ToDoList';
+import Profile from './Profile';
 
 interface IProps {
     history: History
@@ -18,8 +19,9 @@ const AppRoutes: React.FunctionComponent<IProps> = ({ history }) => (
     <Router>
         <Switch>
             <MyAppRoutes>
-            <Route exact path={Routes.HOME} component={() => (<div>Hello, World!</div>)} />
-            <Route exact path={Routes.TODOLIST} component={ToDoList} />
+                <Route exact path={Routes.HOME} component={() => (<div>Hello, World!</div>)} />
+                <Route exact path={Routes.TODOLIST} component={ToDoList} />
+                <Route exact path={Routes.PROFILE} component={Profile} />
             </MyAppRoutes>
         </Switch>
     </Router>
