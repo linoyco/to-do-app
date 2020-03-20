@@ -5,6 +5,7 @@ import { Avatar } from '@material-ui/core';
 import { NavLink } from 'react-router-dom';
 
 import * as Routes from '../../Lib/Routes';
+import { useSelector } from 'react-redux';
 
 const StyledNavButton: any = styled(NavLink)`
     margin-left: 10px;
@@ -39,13 +40,17 @@ const StyledProfile: any = styled(PersonOutline)`
     color: white;
 `;
 
-const Header: React.FunctionComponent = () => (
-    <StyledDiv>
-        <StyledAvatar alt="user image" src='https://i.pravatar.cc/300' />
-        <StyledNavButton to={Routes.PROFILE}><StyledProfile /></StyledNavButton>
-        <StyledNavButton to={''}><StyledMessages /></StyledNavButton>
-        <StyledNavButtonList to={Routes.TODO_LIST}><StyledListIcon /></StyledNavButtonList>
-    </StyledDiv>
-);
+const Header: React.FunctionComponent = () => {
+    const profileImg = useSelector((state: any) => state.app.profileDetails.image);
+
+    return (
+        <StyledDiv>
+            <StyledAvatar alt="user image" src={profileImg} />
+            <StyledNavButton to={Routes.PROFILE}><StyledProfile /></StyledNavButton>
+            <StyledNavButton to={''}><StyledMessages /></StyledNavButton>
+            <StyledNavButtonList to={Routes.TODO_LIST}><StyledListIcon /></StyledNavButtonList>
+        </StyledDiv>
+    )
+};
 
 export default Header;
