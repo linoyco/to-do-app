@@ -5,6 +5,7 @@ import { NavLink } from 'react-router-dom';
 import { Avatar } from '@material-ui/core';
 import { useSelector } from 'react-redux';
 import * as Routes from '../Lib/Routes';
+import CustomSpan from '../Components/CustomSpan';
 
 const StyledSection: any = styled.section`
     width: 100%;
@@ -55,18 +56,17 @@ const Profile: React.FunctionComponent = () => {
 
     return (
         <StyledSection>
-            {console.log(profileData)}
             <StyledFirstDiv>
                 <StyledHeader>My Profile</StyledHeader>
                 <StyledNavButton to={Routes.PROFILE_SETTINGS}><StyledSettings /></StyledNavButton>
             </StyledFirstDiv>
             <StyledAvatar alt="user image" src={profileData.image} />
-            <span>Full Name: {profileData.fullName}</span>
-            <span>Id: {profileData.id}</span>
-            <span>Age: {profileData.age}</span>
-            <span>Email: {profileData.email}</span>
-            <span>Location: {profileData.location}</span>
-            <span>Gender: {profileData.gander}</span>
+            <CustomSpan title='Full Name:' messageDetail={profileData.fullName} />
+            <CustomSpan title='Id:' messageDetail={profileData.id} />
+            <CustomSpan title='Age:' messageDetail={profileData.age} />
+            <CustomSpan title='Email:' messageDetail={profileData.email} />
+            <CustomSpan title='Location:' messageDetail={profileData.location} />
+            <CustomSpan title='Gender:' messageDetail={profileData.gander} />
         </StyledSection>
     )
 };

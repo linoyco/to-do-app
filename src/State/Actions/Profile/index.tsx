@@ -1,4 +1,3 @@
-import * as React from 'react';
 import { ProfileDetails } from '../../../Containers/Profile';
 import * as ProfileActions from './types';
 

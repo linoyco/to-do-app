@@ -15,16 +15,12 @@ const StyledErrorDiv = styled(Box) <IPropsStyle>`
 `;
 
 interface iCustomError {
-    message: string,
-    textAlign: string,
+    message: string;
+    textAlign: string;
 };
 
-class CustomError extends React.Component<iCustomError, {}> {
-    render(): React.ReactElement {
-        return (
-            <StyledErrorDiv visibility="visible" textAlign={this.props.textAlign}>{this.props.message}</StyledErrorDiv>
-        );
-    }
-}
+const CustomError: React.FunctionComponent<iCustomError> = ({ message, textAlign }) => (
+    <StyledErrorDiv visibility="visible" textAlign={textAlign}>{message}</StyledErrorDiv>
+);
 
 export default CustomError;
