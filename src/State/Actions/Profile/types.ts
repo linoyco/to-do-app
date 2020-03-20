@@ -1,4 +1,4 @@
-import { ProfileDetails } from "../../../Containers/Profile";
+import { ProfileDetails } from "../../../Containers/ProfilePage";
 import { IFormErrors } from "../../../Containers/ProfileSettings";
 
 export const REQ_PROFILE_DETAILS = 'REQ_PROFILE_DETAILS';

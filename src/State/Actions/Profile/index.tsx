@@ -1,4 +1,4 @@
-import { ProfileDetails } from '../../../Containers/Profile';
+import { ProfileDetails } from '../../../Containers/ProfilePage';
 import * as ProfileActions from './types';
 
 export function setProfileDetails(profileDetails: ProfileDetails): ProfileActions.IFetchProfileDetails {

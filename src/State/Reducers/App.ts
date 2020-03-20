@@ -1,5 +1,5 @@
 import produce from 'immer';
-import { ProfileDetails } from '../../Containers/Profile';
+import { ProfileDetails } from '../../Containers/ProfilePage';
 import { profileActionType, FETCH_PROFILE_DETAILS } from '../Actions/Profile/types';
 
 export interface IAppState {

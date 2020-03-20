@@ -5,7 +5,7 @@ import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
 import CustomInput from '../Components/CustomInput';
 import { Button } from '@material-ui/core';
-import { ProfileDetails } from './Profile';
+import { ProfileDetails } from './ProfilePage';
 import { SET_FORM_ERROR, CHECK_VALIDATION } from '../State/Actions/Profile/types';
 
 const StyledSection: any = styled.section`

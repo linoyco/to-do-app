@@ -1,4 +1,4 @@
-import { ProfileDetails } from '../Containers/Profile';
+import { ProfileDetails } from '../Containers/ProfilePage';
 
 export const DemoProfile: ProfileDetails = {
     fullName: 'Linoy Cohen',

@@ -51,7 +51,7 @@ export interface ProfileDetails {
     image: string;
 };
 
-const Profile: React.FunctionComponent = () => {
+const ProfilePage: React.FunctionComponent = () => {
     const profileData = useSelector((state: any) => state.app.profileDetails);
 
     return (
@@ -71,4 +71,4 @@ const Profile: React.FunctionComponent = () => {
     )
 };
 
-export default Profile;
+export default ProfilePage;

@@ -1,7 +1,7 @@
 import { take, put, call } from "redux-saga/effects";
 import { DemoProfile } from '../../Lib/DemoData';
 import { REQ_PROFILE_DETAILS, FETCH_PROFILE_DETAILS, CHECK_VALIDATION, SET_FORM_ERROR } from "../Actions/Profile/types";
-import { ProfileDetails } from "../../Containers/Profile";
+import { ProfileDetails } from "../../Containers/ProfilePage";
 import * as commonValidator from '../../Lib/commonValidators';
 
 export function* watchFetchProfileData() {
