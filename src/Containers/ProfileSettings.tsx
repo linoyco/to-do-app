@@ -5,6 +5,8 @@ import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
 import CustomInput from '../Components/CustomInput';
 import { Button } from '@material-ui/core';
+import { ProfileDetails } from './Profile';
+import { SET_FORM_ERROR, CHECK_VALIDATION } from '../State/Actions/Profile/types';
 
 const StyledSection: any = styled.section`
     width: 100%;
@@ -25,6 +27,12 @@ const StyledHeader: any = styled.h1`
     margin-left: 0px;
 `;
 
+export interface IFormErrors {
+    fullNameError: string;
+    emailError: string;
+    genderError: string;
+}
+
 const ProfileSettings: React.FunctionComponent = () => {
     const dispatch: Dispatch = useDispatch();
 
@@ -36,6 +44,7 @@ const ProfileSettings: React.FunctionComponent = () => {
     const [gender, setGender] = React.useState<string>('');
 
     const profileData = useSelector((state: any) => state.app.profileDetails);
+    const errors = useSelector((state: any) => state.profile.formErrors);
 
     React.useEffect(() => {
         setFullName(profileData.fullName);
@@ -46,14 +55,30 @@ const ProfileSettings: React.FunctionComponent = () => {
         setGender(profileData.gender);
     }, [profileData]);
 
+    const newProfile: ProfileDetails = {
+        age: age,
+        email: email,
+        fullName: fullName,
+        gender: gender,
+        id: id,
+        image: profileData.image,
+        location: location
+    }
+
+    async function onSubmitClick(e: React.FormEvent<HTMLFormElement>) {
+        e.preventDefault();
+        dispatch({ type: SET_FORM_ERROR, formErrors: { fullNameError: '', emailError: '', genderError: '' } });
+        dispatch({ type: CHECK_VALIDATION, profileDetails: newProfile });
+    };
+
     return (
         <StyledSection>
             <StyledHeader>Profile Settings:</StyledHeader>
-            <form>
+            <form onSubmit={onSubmitClick}>
                 <StyledDivRow>
                     <CustomInput
                         label='Full Name'
-                        errorMessage=''
+                        errorMessage={errors.fullNameError}
                         value={fullName || ''}
                         handleChange={(e: React.ChangeEvent<HTMLInputElement>) => setFullName(e.target.value)} />
                     <CustomInput
@@ -70,7 +95,7 @@ const ProfileSettings: React.FunctionComponent = () => {
                         handleChange={(e: React.ChangeEvent<HTMLInputElement>) => setAge(e.target.value)} />
                     <CustomInput
                         label='Email'
-                        errorMessage=''
+                        errorMessage={errors.emailError}
                         value={email || ''}
                         handleChange={(e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)} />
                 </StyledDivRow>
@@ -82,7 +107,7 @@ const ProfileSettings: React.FunctionComponent = () => {
                         handleChange={(e: React.ChangeEvent<HTMLInputElement>) => setLocation(e.target.value)} />
                     <CustomInput
                         label='Gender'
-                        errorMessage=''
+                        errorMessage={errors.genderError}
                         value={gender || ''}
                         handleChange={(e: React.ChangeEvent<HTMLInputElement>) => setGender(e.target.value)} />
                 </StyledDivRow>

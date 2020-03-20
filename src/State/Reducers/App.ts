@@ -13,7 +13,7 @@ const initialState: IAppState = {
         age: '',
         email: '',
         location: '',
-        gender: 'F' || 'M',
+        gender: '',
         image: ''
     }
 }

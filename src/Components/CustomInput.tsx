@@ -2,6 +2,11 @@ import * as React from 'react';
 import { TextField } from "@material-ui/core";
 
 import CustomError from "./CustomError";
+import styled from 'styled-components';
+
+const StyledDiv: any = styled.div`
+    margin-left: 30px;
+`;
 
 interface IProps {
     errorMessage: string;
@@ -15,7 +20,7 @@ interface IProps {
 };
 
 const CustomInput: React.FunctionComponent<IProps> = ({ errorMessage, value, type, handleChange, label, hasBorder, id }) => (
-    <div>
+    <StyledDiv>
         <TextField
             id={id}
             label={label}
@@ -24,10 +29,9 @@ const CustomInput: React.FunctionComponent<IProps> = ({ errorMessage, value, typ
             margin='normal'
             variant={'standard'}
             onChange={handleChange}
-            style={{ marginLeft: '30px'}}
         />
         <CustomError message={errorMessage} textAlign='left' />
-    </div>
+    </StyledDiv>
 );
 
 export default CustomInput;

@@ -1,9 +1,9 @@
-import * as React from 'react';
 import {all} from 'redux-saga/effects';
-import { watchFetchProfileData } from './profile';
+import { watchFetchProfileData, watchUpdateProfile } from './profile';
 
 export default function* rootSaga() {
 	yield all([
-        watchFetchProfileData()
+		watchFetchProfileData(),
+		watchUpdateProfile()
 	]);
 }

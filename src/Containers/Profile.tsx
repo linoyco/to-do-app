@@ -47,7 +47,7 @@ export interface ProfileDetails {
     age: string;
     email: string;
     location: string;
-    gender: string | string;
+    gender: string;
     image: string;
 };
 
