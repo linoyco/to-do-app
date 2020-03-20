@@ -22,8 +22,9 @@ const CustomInput: React.FunctionComponent<IProps> = ({ errorMessage, value, typ
             value={value}
             type={type}
             margin='normal'
-            variant={'outlined' || 'standard'}
+            variant={'standard'}
             onChange={handleChange}
+            style={{ marginLeft: '30px'}}
         />
         <CustomError message={errorMessage} textAlign='left' />
     </div>

@@ -9,11 +9,11 @@ export interface IAppState {
 const initialState: IAppState = {
     profileDetails: {
         fullName: '',
-        id: 0,
-        age: 0,
+        id: '',
+        age: '',
         email: '',
         location: '',
-        gander: 'F' || 'M',
+        gender: 'F' || 'M',
         image: ''
     }
 }

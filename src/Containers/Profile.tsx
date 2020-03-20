@@ -43,11 +43,11 @@ const StyledAvatar: any = styled(Avatar)`
 
 export interface ProfileDetails {
     fullName: string;
-    id: number;
-    age: number;
+    id: string;
+    age: string;
     email: string;
     location: string;
-    gander: string | string;
+    gender: string | string;
     image: string;
 };
 
@@ -66,7 +66,7 @@ const Profile: React.FunctionComponent = () => {
             <CustomSpan title='Age:' messageDetail={profileData.age} />
             <CustomSpan title='Email:' messageDetail={profileData.email} />
             <CustomSpan title='Location:' messageDetail={profileData.location} />
-            <CustomSpan title='Gender:' messageDetail={profileData.gander} />
+            <CustomSpan title='Gender:' messageDetail={profileData.gender} />
         </StyledSection>
     )
 };
